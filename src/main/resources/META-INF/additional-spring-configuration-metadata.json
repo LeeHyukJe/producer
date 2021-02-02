@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "callme.supplier.enabled",
+      "type": "java.lang.String",
+      "description": "Description for callme.supplier.enabled."
+  }
+] }

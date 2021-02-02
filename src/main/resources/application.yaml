@@ -1,0 +1,21 @@
+#server.port=8081
+#spring.cloud.stream.bindings.callmeEventSupplier-out-0.destination=callme-events
+#spring.cloud.stream.source=callMeEventSupplier
+#logging.level.org.springframework.amqp=DEBUG
+#callme.supplier.enabled=false
+
+spring:
+  cloud:
+    function:
+      definition: upperCase;lowerCase
+    stream:
+      bindings:
+        upperCase-out-0:
+          binder: rabbit
+          destination: callme-events
+        lowerCase-out-0:
+          binder: rabbit
+          destination: callme-events
+callme:
+  supplier:
+    enabled: false
